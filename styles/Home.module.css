@@ -50,11 +50,14 @@
 
 /* CTA Section Styles */
 .ctaBackground {
-  padding: 10rem 6rem;
+  padding: 6rem 6rem;
   position: relative;
   overflow: hidden;
   background: transparent;
   z-index: 1;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
 }
 
 .ctaContainer {
@@ -101,7 +104,11 @@
 .darkSection {
   position: relative;
   background: #000000;
-  overflow: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .darkSectionBackground {
@@ -130,13 +137,13 @@
 
 .footer {
   background: transparent;
-  padding: 8rem 6rem 3rem;
+  padding: 4rem 6rem 3rem;
   color: #94A3B8;
   position: relative;
-
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-height: 50vh;
 }
 
 .footerBackground {
@@ -683,34 +690,45 @@
 }
 
 .serviceCardsSection {
-  padding: 6rem;
+  padding: 6rem 2rem;
   background: white;
+  width: 100%;
 }
 
 .serviceCardsGrid {
-  max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  width: 100%;
+  padding: 0;
 }
 
+/* Service Cards Media Queries */
 @media (max-width: 1200px) {
-  .servicesGrid {
+  .serviceCardsGrid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .serviceCardsSection {
+    padding: 4rem 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .servicesGrid {
+  .serviceCardsGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .serviceCardsSection {
+    padding: 3rem 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .servicesGrid {
+  .serviceCardsGrid {
     grid-template-columns: 1fr;
+  }
+  .serviceCardsSection {
+    padding: 2rem 1rem;
   }
 }
 

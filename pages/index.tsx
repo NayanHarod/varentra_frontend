@@ -75,13 +75,6 @@ export default function Home() {
               <p>Expertise in optimizing business processes for companies across multiple industries.</p>
             </a>
 
-            <a href="#" className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>
-                <Image src="/icons/data-tracking.svg" alt="Data Tracking Security" width={48} height={48} />
-              </div>
-              <h3>Data Tracking Security</h3>
-              <p>Expertise in securing data tracking systems for companies across various industries.</p>
-            </a>
           </div>
         </section>
 
