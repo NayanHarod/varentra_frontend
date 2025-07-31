@@ -13,7 +13,8 @@ export default function Home() {
       <Head>
         <title>Varentra - Discovering The Hidden Futures</title>
         <meta name="description" content="Empowering Progress Through Intelligent Solutions" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
+        <link rel="shortcut icon" href="/logo.png" />
       </Head>
 
       <Header />

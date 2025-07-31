@@ -446,15 +446,18 @@
 
 .whoWeBring {
   display: flex;
-  padding: 6rem 4rem;
   background: #fff;
-  gap: 4rem;
-  align-items: center;
+  width: 100%;
+  padding: 8rem 0;
 }
 
 .whoWeBringContent {
   flex: 1;
-  max-width: 600px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 6rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .sectionTag {
@@ -567,14 +570,19 @@
   mix-blend-mode: multiply;
 }
 
+@media (max-width: 1400px) {
+  .whoWeBringContent {
+    padding: 0 4rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .whoWeBring {
-    flex-direction: column;
-    padding: 4rem 2rem;
+    padding: 6rem 0;
   }
 
   .whoWeBringContent {
-    max-width: 100%;
+    padding: 0 3rem;
   }
 
   .whoWeBringImage {
