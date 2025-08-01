@@ -13,11 +13,12 @@ const ServicesStats = () => {
     <section className={styles.services}>
       <div className={styles.servicesImage}>
         <Image
-          src="/team.jpg"
+          src="/services-stats.jpg"
           alt="Technology Meeting"
           fill
+          sizes="100vw"
           priority
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover', width: '100%', height: '100%' }}
         />
       </div>
       
@@ -47,6 +48,12 @@ const ServicesStats = () => {
               </div>
             </div>
           </div>
+
+          <p className={styles.sectionDescription}>
+            We help businesses achieve strategic technology transformation, minimising 
+            the totality of their end-to-end business risk and maximising the business 
+            value of their IT infrastructure.
+          </p>
 
           <div className={styles.serviceStats}>
             {stats.map((stat, index) => (

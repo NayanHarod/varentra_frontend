@@ -1,8 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import styles from "./Header.module.css";
 
 export const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className={styles.header}>
       <Link href="/" className={styles.logo}>
@@ -18,14 +25,22 @@ export const Header = () => {
           }}
         />
       </Link>
-      <nav className={styles.nav}>
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/services">Services</Link>
-        <Link href="/pages">Pages</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/contact">Contact</Link>
+      
+      <div className={styles.menuToggle} onClick={toggleMenu}>
+        <span style={{transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none'}}></span>
+        <span style={{opacity: menuOpen ? '0' : '1'}}></span>
+        <span style={{transform: menuOpen ? 'rotate(-45deg) translate(7px, -6px)' : 'none'}}></span>
+      </div>
+      
+      <nav className={`${styles.nav} ${menuOpen ? styles.navActive : ''}`}>
+        <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
+        <Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link>
+        <Link href="/pages" onClick={() => setMenuOpen(false)}>Pages</Link>
+        <Link href="/blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+        <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
       </nav>
+      
       <div className={styles.headerRight}>
         <div className={styles.phone}>
           <span>Have Any Questions?</span>

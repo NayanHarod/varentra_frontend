@@ -6,6 +6,7 @@ import ServicesStats from "@/components/ServicesStats";
 import TeamExperts from "@/components/TeamExperts";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { FiMonitor, FiCloud, FiCode, FiGrid, FiShield } from 'react-icons/fi';
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
               alt="Healthcare Technology"
               fill
               priority
+              sizes="100vw"
               style={{ objectFit: 'cover' }}
             />
           </div>
@@ -46,7 +48,7 @@ export default function Home() {
           <div className={styles.serviceCardsGrid}>
             <a href="#" className={styles.serviceCard}>
               <div className={styles.serviceIcon}>
-                <Image src="/icons/tech-consulting.svg" alt="Technology Consulting" width={32} height={32} />
+                <FiMonitor size={28} color="#8B5CF6" />
               </div>
               <h3>Technology Consulting</h3>
               <p>Expertise in IT consultancy for the many companies, for their different working areas.</p>
@@ -54,7 +56,7 @@ export default function Home() {
 
             <a href="#" className={styles.serviceCard}>
               <div className={styles.serviceIcon}>
-                <Image src="/icons/cloud-security.svg" alt="Cloud solutions & IT security" width={32} height={32} />
+                <FiCloud size={28} color="#8B5CF6" />
               </div>
               <h3>Cloud solutions & IT security</h3>
               <p>Expertise in cloud solutions and IT security for various companies in different sectors.</p>
@@ -62,7 +64,7 @@ export default function Home() {
 
             <a href="#" className={styles.serviceCard}>
               <div className={styles.serviceIcon}>
-                <Image src="/icons/software-dev.svg" alt="Software Development" width={32} height={32} />
+                <FiCode size={28} color="#8B5CF6" />
               </div>
               <h3>Software Development</h3>
               <p>Expertise in custom software development for diverse businesses across various sectors.</p>
@@ -70,83 +72,96 @@ export default function Home() {
 
             <a href="#" className={styles.serviceCard}>
               <div className={styles.serviceIcon}>
-                <Image src="/icons/business-process.svg" alt="Business process solutions" width={32} height={32} />
+                <FiGrid size={28} color="#8B5CF6" />
               </div>
               <h3>Business process solutions</h3>
               <p>Expertise in optimizing business processes for companies across multiple industries.</p>
             </a>
+            
+            <a href="#" className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <FiShield size={28} color="#8B5CF6" />
+              </div>
+              <h3>Data Tracking Security</h3>
+              <p>Expertise in securing data tracking systems for companies across various industries.</p>
+            </a>
+
 
           </div>
         </section>
 
         <section className={styles.whoWeBring}>
-          <div className={styles.whoWeBringContent}>
-            <span className={styles.sectionTag}>WHO WE BRING</span>
-            <h2 className={styles.sectionTitle}>
-              Exclusive Technology<br />
-              to Provide IT Solutions<br />
-              & Services
-            </h2>
-            <p className={styles.sectionDescription}>
-              We have over 20+ years of experience in all stages of software design,
-              development, maintenance, and support.
-            </p>
+          <div className={styles.whoWeBringContainer}>
+            <div className={styles.whoWeBringContent}>
+              <span className={styles.sectionTag}>WHO WE BRING</span>
+              <h2 className={styles.sectionTitle}>
+                Exclusive Technology<br />
+                to Provide IT Solutions<br />
+                & Services
+              </h2>
+              <p className={styles.sectionDescription}>
+                We have over 20+ years of experience in all stages of software design,
+                development, maintenance, and support.
+              </p>
 
-            <div className={styles.servicesList}>
-              <div className={styles.servicesColumn}>
-                <div className={styles.serviceItem}>
-                  <Image src="/icons/check.svg" alt="check" width={20} height={20} />
-                  <span>IT Professional services</span>
+              <div className={styles.servicesList}>
+                <div className={styles.servicesColumn}>
+                  <div className={styles.serviceItem}>
+                    <Image src="/icons/check.svg" alt="check" width={20} height={20} />
+                    <span>IT Professional services</span>
+                  </div>
+                  <div className={styles.serviceItem}>
+                    <Image src="/icons/check.svg" alt="check" width={20} height={20} />
+                    <span>Managed IT services</span>
+                  </div>
                 </div>
-                <div className={styles.serviceItem}>
-                  <Image src="/icons/check.svg" alt="check" width={20} height={20} />
-                  <span>Managed IT services</span>
+                <div className={styles.servicesColumn}>
+                  <div className={styles.serviceItem}>
+                    <Image src="/icons/check.svg" alt="check" width={20} height={20} />
+                    <span>Application Development services</span>
+                  </div>
+                  <div className={styles.serviceItem}>
+                    <Image src="/icons/check.svg" alt="check" width={20} height={20} />
+                    <span>Maintenance And Support</span>
+                  </div>
                 </div>
               </div>
-              <div className={styles.servicesColumn}>
-                <div className={styles.serviceItem}>
-                  <Image src="/icons/check.svg" alt="check" width={20} height={20} />
-                  <span>Application Development services</span>
-                </div>
-                <div className={styles.serviceItem}>
-                  <Image src="/icons/check.svg" alt="check" width={20} height={20} />
-                  <span>Maintenance And Support</span>
-                </div>
+
+              <p className={styles.sectionDescription}>
+                Our teams know how to harness the power of data, artificial intelligence,
+                modernising core, optimising and automating operations to achieve
+                your business goals.
+              </p>
+
+              <div className={styles.ctaSection}>
+                <button className={styles.moreAboutUs}>
+                  MORE ABOUT US
+                  <Image src="/icons/arrow-right.svg" alt="arrow" width={16} height={16} />
+                </button>
+                
               </div>
             </div>
-
-            <p className={styles.sectionDescription}>
-              Our teams know how to harness the power of data, artificial intelligence,
-              modernising core, optimising and automating operations to achieve
-              your business goals.
-            </p>
-
-            <div className={styles.ctaSection}>
-              <button className={styles.moreAboutUs}>
-                MORE ABOUT US
-                <Image src="/icons/arrow-right.svg" alt="arrow" width={16} height={16} />
-              </button>
-              
-            </div>
-          </div>
-          <div className={styles.whoWeBringImage}>
-            <div className={styles.bannerImage}>
-              <Image
-                src="/cta-banner.jpg"
-                alt="Team Banner"
-                fill
-                priority
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-            <div className={styles.maskImage}>
-              <Image
-                src="/cta-mask.png"
-                alt="Team Mask"
-                fill
-                priority
-                style={{ objectFit: 'contain' }}
-              />
+            <div className={styles.whoWeBringImage}>
+              <div className={styles.bannerImage}>
+                <Image
+                  src="/cta-banner.jpg"
+                  alt="Team Banner"
+                  fill
+                  sizes="100vw"
+                  priority
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                />
+              </div>
+              <div className={styles.maskImage}>
+                <Image
+                  src="/cta-mask.png"
+                  alt="Team Mask"
+                  sizes="100vw"
+                  fill
+                  priority
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -159,8 +174,9 @@ export default function Home() {
               src="/dark-background.jpg"
               alt="Background"
               fill
+              sizes="100vw"
               priority
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             />
           </div>
           <div className={styles.darkOverlay}></div>

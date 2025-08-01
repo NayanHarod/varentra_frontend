@@ -8,6 +8,7 @@
   z-index: 10;
   max-width: 100%;
   box-sizing: border-box;
+  justify-content: space-between;
 }
 
 .logo {
@@ -17,6 +18,7 @@
   text-decoration: none;
   padding: 0.5rem;
   transition: transform 0.2s ease;
+  z-index: 20;
 }
 
 .logo:hover {
@@ -47,6 +49,25 @@
 
 .nav a:hover {
   color: #8B5CF6;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.menuToggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 .headerRight {
@@ -87,4 +108,79 @@
 
 .getStarted:hover {
   background: #7C3AED;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+  .phone span {
+    font-size: 0.75rem;
+  }
+  
+  .phone a {
+    font-size: 0.875rem;
+  }
+  
+  .nav {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .nav {
+    margin: 0 1rem;
+    gap: 1rem;
+  }
+  
+  .getStarted {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menuToggle {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .header {
+    flex-wrap: wrap;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.95);
+    margin: 0;
+    padding: 6rem 2rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.3s ease;
+    z-index: 15;
+  }
+  
+  .navActive {
+    left: 0;
+  }
+  
+  .headerRight {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo img {
+    max-height: 50px;
+  }
 }
